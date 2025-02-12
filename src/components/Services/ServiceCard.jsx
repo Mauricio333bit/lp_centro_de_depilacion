@@ -11,7 +11,7 @@ const serviceShape = {
 const ServiceCard = ({ service }) => {
   return (
     <motion.div
-      whileHover={{ y: -20 }}
+      whileHover={{ scale:1.08 }}
       className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 w-10/12"
     >
       <div className="h-48 bg-gray-200 overflow-hidden">

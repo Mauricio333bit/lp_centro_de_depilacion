@@ -29,7 +29,7 @@ export const FadeUp = (delay = 0, threshold = 0.1) => ({
       x: 0,
       transition: {
         type: "spring",
-        stiffness: 100,
+        stiffness: 50, 
         duration: 0.5,
         delay: delay
       }
