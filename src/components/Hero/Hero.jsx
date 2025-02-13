@@ -11,7 +11,7 @@ import openWhatsAppChat from "../../utils/OpenWspChat";
 function Hero() {
   return (
     <div className="relative w-full overflow-hidden">
-      <section className="bg-lime-50 min-h-screen relative px-4">
+      <section className="bg-lime-50 min-h-screen relative px-4 flex flex-col justify-center">
         <Navbar />
         <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 min-h-screen  relative top-0">
           {/* Brand info */}
