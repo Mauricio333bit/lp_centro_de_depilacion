@@ -1,8 +1,8 @@
-const openWhatsAppChat = (serviceName = "") => {
+const openWhatsAppChat = (service) => {
   const phoneNumber = "2613422675";
   const message = encodeURIComponent(
-    serviceName
-      ? `Hola, estoy interesado en el servicio "${serviceName}". ¿Me podrías brindar más información?`
+    service
+      ? `Hola, estoy interesado/a en el servicio "${service.name}". ¿Tenes turnos disponibles?`
       : "Hola, estoy interesado/a en tus servicios. ¿Me podrías brindar más información?"
   );
 

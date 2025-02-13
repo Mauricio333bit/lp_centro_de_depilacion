@@ -10,26 +10,26 @@ function Services() {
     const Services = [
         {
           id: 1,
-          name: "Depilación Integral 1",
-          description: "Técnica española para una piel suave y sin irritaciones.",
+          name: "Depilación Española",
+          description: "Técnica para una piel suave y sin irritaciones.",
           img: depilacion1,
         },
         {
           id: 2,
-          name: "Depilación Integral 2",
+          name: "Depilación Fast",
           description: "Depilación con espátula y roll-on, efectiva y rápida.",
           img: piernas2,
         },
         {
           id: 3,
-          name: "Masajes Integrales 1",
-          description: "Relajantes para aliviar el estrés y mejorar la circulación.",
+          name: "Masajes Relajantes",
+          description: "Adecuados para aliviar el estrés y mejorar la circulación.",
           img: masaje,
         },
         {
           id: 4,
-          name: "Masajes Integrales 2",
-          description: "Descontracturantes para aliviar tensiones y dolores musculares.",
+          name: "Masajes Descontracturantes",
+          description: "Si buscas aliviar tensiones y dolores musculares.",
           img: masaje3,
         },
       ];

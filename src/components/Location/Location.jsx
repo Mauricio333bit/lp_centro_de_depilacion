@@ -2,12 +2,21 @@ import { motion } from "framer-motion";
 import { FadeUp } from "../../utils/framerAnimations";
 
 const Location = () => {
-  // Coordenadas de ejemplo - reemplazar con las coordenadas reales
-  const location = {
-    address: "Barrio Amyso 2 M-D C-9",
-    lat: -32.7216667,
-    lng: -68.6108611,
-  };
+  
+  const contactInfo={
+    phone: "+54 9 11 1234-5678",
+    email: "mariajosesuarez058@gmail.com",
+    shedules:{
+      week: "Martes a Viernes: 16:30 - 21:00",
+      weekend: "Sabados: 9:00 - 11:00 / 16:00 - 20",
+    },
+    location:{
+      address: "Barrio Amyso 2 M-D C-9",
+      lat: -32.7216667,
+      lng: -68.6108611,
+    }
+
+  }
 
   return (
     <section className="py-16 bg-lime-50/30">
@@ -28,17 +37,17 @@ const Location = () => {
             <div className="space-y-4">
               <div>
                 <h4 className="font-medium text-gray-700">Dirección</h4>
-                <p className="text-gray-600">{location.address}</p>
+                <p className="text-gray-600">{contactInfo.location.address}</p>
               </div>
               <div>
                 <h4 className="font-medium text-gray-700">Horarios</h4>
-                <p className="text-gray-600">Lunes a Viernes: 9:00 - 20:00</p>
-                <p className="text-gray-600">Sábados: 9:00 - 14:00</p>
+                <p className="text-gray-600">{contactInfo.shedules.week}</p>
+                <p className="text-gray-600">{contactInfo.shedules.weekend}</p>
               </div>
               <div>
                 <h4 className="font-medium text-gray-700">Contacto</h4>
-                <p className="text-gray-600">Tel: (261) 153-422675</p>
-                <p className="text-gray-600">Email: marasdasd@gmail.com</p>
+                <p className="text-gray-600">Tel: {contactInfo.phone}</p>
+                <p className="text-gray-600">Email: {contactInfo.email}</p>
               </div>
             </div>
           </motion.div>
@@ -49,7 +58,7 @@ const Location = () => {
             {/* Mapa de OpenStreetMap */}
             <iframe
               title="Ubicación en el mapa"
-              src={`https://www.openstreetmap.org/export/embed.html?bbox=${location.lng - 0.01},${location.lat - 0.01},${location.lng + 0.01},${location.lat + 0.01}&layer=mapnik&marker=${location.lat},${location.lng}`}
+              src={`https://www.openstreetmap.org/export/embed.html?bbox=${contactInfo.location.lng - 0.01},${contactInfo.location.lat - 0.01},${contactInfo.location.lng + 0.01},${contactInfo.location.lat + 0.01}&layer=mapnik&marker=${contactInfo.location.lat},${contactInfo.location.lng}`}
               className="w-full h-full border-0"
               allowFullScreen
               loading="lazy"

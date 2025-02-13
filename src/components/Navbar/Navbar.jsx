@@ -1,7 +1,8 @@
-import { IoMdMenu } from "react-icons/io";
+import { IoMdClose, IoMdMenu } from "react-icons/io";
 import { motion } from "framer-motion";
 import { FadeRight } from "../../utils/framerAnimations";
 import logo from "../../assets/suspiro.svg"
+import { useState } from "react";
 function Navbar() {
   const NavbarMenu = [
     {
@@ -25,6 +26,11 @@ function Navbar() {
       path: "#contacto",
     },
   ];
+
+  const [nav, setNav] = useState(false);
+  const handleNav = () => {
+    setNav(!nav);
+  };
   return (
     <nav className="bg-transparent  top-0 w-11/12 z-30 absolute">
       <div className="container flex justify-between py-4 mx-auto items-center ">
@@ -50,9 +56,39 @@ function Navbar() {
           </ul>
         </div>
         {/* Hamburguer section */}
-        <div className="lg:hidden px-2 text-2xl ">
-          <IoMdMenu></IoMdMenu>
+        <div onClick={handleNav} className="block md:hidden px-2 text-2xl text-primary">
+          {!nav ? (
+            <IoMdMenu
+              size={30}
+              className="  duration-500 cursor-pointer "
+            />
+          ) : (
+            <IoMdClose
+              size={30}
+              className=" duration-500 cursor-pointer"
+            />
+          )}
         </div>
+        <div
+          className={
+            nav
+              ? "md:hidden rounded w-full bg-primary border-4 border-secondary  text-white text-center opacity-100 justify-center duration-300  absolute top-[80px] py-5 left-0 flex z-50 "
+              : " absolute w-full   duration-700 top-[80px]  text-center justify-center opacity-0 "
+          }
+        >
+          <ul className="w-full flex flex-col overflow-hidden gap-2 ">
+            {NavbarMenu.map((li) => (
+              <a
+                key={li.id}
+                href={li.path}
+                className=" hover:border-b-2 border-white duration-500 cursor-pointer text-2xl w-full "
+              >
+                {li.tittle}
+              </a>
+            ))}
+          </ul>
+        </div>
+
       </div>
     </nav>
   );
