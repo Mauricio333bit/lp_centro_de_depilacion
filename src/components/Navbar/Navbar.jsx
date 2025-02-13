@@ -33,7 +33,7 @@ function Navbar() {
   };
   return (
     <nav className="bg-transparent flex justify-center  top-0 w-full z-30 absolute left-0">
-      <div className="container flex justify-between py-4 mx-auto items-center ">
+      <div className="container flex justify-between py-4 mx-auto items-center px-3 sm:px-0">
         {/* Logo section */}
         
           <img src={logo} alt="" className="w-40" />
@@ -72,8 +72,8 @@ function Navbar() {
         <div
           className={
             nav
-              ? "md:hidden rounded w-full bg-primary border-4 border-secondary  text-white text-center opacity-100 justify-center duration-300  absolute top-[80px] py-5  flex z-50  left-0"
-              : "left-0 absolute w-full   duration-700 top-[80px]  text-center justify-center opacity-0 "
+              ? "md:hidden rounded w-full bg-primary border-4 border-secondary  text-white text-center opacity-100 justify-center duration-300  absolute top-[80px] py-5  flex z-50  left-0 px-2"
+              : "left-0 absolute w-full   duration-700 top-[80px]  text-center justify-center opacity-0 px-2"
           }
         >
           <ul className="w-full flex flex-col overflow-hidden gap-2 ">
