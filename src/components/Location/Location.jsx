@@ -1,10 +1,11 @@
 import { motion } from "framer-motion";
 import { FadeUp } from "../../utils/framerAnimations";
+import openWhatsAppChat from "../../utils/OpenWspChat";
 
 const Location = () => {
   
   const contactInfo={
-    phone: "+54 9 11 1234-5678",
+    phone: "+54 9 261 153422675",
     email: "mariajosesuarez058@gmail.com",
     shedules:{
       week: "Martes a Viernes: 16:30 - 21:00",
@@ -19,7 +20,7 @@ const Location = () => {
   }
 
   return (
-    <section className="py-16 bg-lime-50/30">
+    <section className="py-16 bg-lime-50/30 " id="contacto">
       <div className="container mx-auto px-4">
         <motion.div 
           className="text-center mb-12"
@@ -49,6 +50,9 @@ const Location = () => {
                 <p className="text-gray-600">Tel: {contactInfo.phone}</p>
                 <p className="text-gray-600">Email: {contactInfo.email}</p>
               </div>
+              <button className="mt-4 text-xl px-4 py-2 bg-primary text-white rounded-lg hover:bg-secondary transition-colors duration-300 w-full hover:cursor-pointer" onClick={()=>openWhatsAppChat()}>
+          Quiero mi turno
+        </button>
             </div>
           </motion.div>
           <motion.div 

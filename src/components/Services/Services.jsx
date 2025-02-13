@@ -35,7 +35,7 @@ function Services() {
       ];
       
   return (
-    <section className="bg-secondary-light w-full ">
+    <section className="bg-secondary-light w-full " id="servicios">
       <div className="container pt-14 pb-10 mx-auto">
       <motion.h2
         className="text-4xl md:text-5xl text-center font-bold mb-16"

@@ -23,7 +23,7 @@ function WhyUs() {
   ];
 
   return (
-    <section className="min-h-screen bg-lime-50/30 py-16">
+    <section className="min-h-screen bg-lime-50/30 py-16 " id="nosotros">
       <motion.h2
         className="text-4xl md:text-5xl text-center font-bold mb-16"
         {...FadeUp(0.3)}
