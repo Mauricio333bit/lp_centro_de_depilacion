@@ -1,6 +1,7 @@
 import { IoMdMenu } from "react-icons/io";
 import { motion } from "framer-motion";
 import { FadeRight } from "../../utils/framerAnimations";
+import logo from "../../assets/suspiro.svg"
 function Navbar() {
   const NavbarMenu = [
     {
@@ -28,9 +29,9 @@ function Navbar() {
     <nav className="bg-transparent  top-0 w-11/12 z-30 absolute">
       <div className="container flex justify-between py-4 mx-auto items-center ">
         {/* Logo section */}
-        <div>
-          <h1 className="font-bold text-2xl  px-2">Logo</h1>
-        </div>
+        
+          <img src={logo} alt="" className="w-40" />
+        
         {/* Menu section */}
         <div className="text-2xl hidden lg:block text-dark  ">
           <ul className="flex gap-4 items-center">

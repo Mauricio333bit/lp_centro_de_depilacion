@@ -3,8 +3,10 @@ import Navbar from "../Navbar/Navbar";
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 import blob from "../../assets/blob3.svg";
 import piernas from "../../assets/piernas.svg";
-import { motion } from "framer-motion";
-import { FadeUp, FadeRight } from "../../utils/framerAnimations";
+import { motion} from "framer-motion";
+import { FadeUp, FadeRight, ScrollRotateSoft } from "../../utils/framerAnimations";
+import openWhatsAppChat from "../../utils/OpenWspChat";
+
 
 function Hero() {
   return (
@@ -28,7 +30,7 @@ function Hero() {
                 className="flex justify-center md:justify-start my-2" 
                 {...FadeUp(0.6)}
               >
-                <button className="btn-primary flex items-center gap-2 group hover:cursor-pointer">
+                <button className="btn-primary flex items-center gap-2 group hover:cursor-pointer" onClick={()=>openWhatsAppChat()}>
                   Agenda tu sesion
                   <IoIosArrowRoundForward className="text-3xl group-hover:translate-x-2.5 group-hover:-rotate-45 duration-500" />
                 </button>
@@ -64,7 +66,7 @@ function Hero() {
 
         {/* Blob background */}
         <motion.img 
-          {...FadeUp(0.7)} 
+          {...ScrollRotateSoft(0)} 
           src={blob} 
           alt="" 
           className="absolute -z-0 bottom-0 w-full max-w-[100vw] md:max-w-[80vw] right-0"

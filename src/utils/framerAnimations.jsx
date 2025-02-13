@@ -64,3 +64,27 @@ export const FadeUp = (delay = 0, threshold = 0.1) => ({
       amount: threshold 
     }
   });
+
+  export const ScrollRotateSoft = (delay = 0, threshold = 0.1) => ({
+    initial: {
+      opacity: 0,
+      y: -30,
+      rotate: -90
+    },
+    whileInView: {
+      opacity: 1,
+      y: 0,
+      rotate: 0,
+      transition: {
+        type: "spring",
+        stiffness: 35,
+        damping: 20,
+        duration: 1,
+        delay: delay
+      }
+    },
+    viewport: {
+      once: false,
+      amount: threshold
+    }
+  });

@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { FadeRight, FadeUp } from "../../utils/framerAnimations";
-import masaje from "../../assets/masaje.svg";
+import masaje from "../../assets/masaje2.svg";
 import {
   IoHeartOutline,
   IoTimeOutline,
@@ -31,7 +31,18 @@ function WhyUs() {
         ¿Por qué elegirnos?
       </motion.h2>
       <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2">
-        {/* Grid 2x2 */}
+        {/* Imagen */}
+        <div className="flex justify-center">
+          <motion.div className="max-w-md w-full" {...FadeRight(0.8)}>
+            <img
+              src={masaje}
+              alt="Masaje relajante"
+              className="w-full h-auto"
+            />
+          </motion.div>
+        </div>
+        
+        {/* Grid 2x2 raeson */}
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-2 gap-4 mb-12">
           {reasons.map((reason, index) => (
             <motion.div
@@ -47,16 +58,7 @@ function WhyUs() {
           ))}
         </div>
 
-        {/* Imagen */}
-        <div className="flex justify-center">
-          <motion.div className="max-w-md w-full" {...FadeRight(0.8)}>
-            <img
-              src={masaje}
-              alt="Masaje relajante"
-              className="w-full h-auto"
-            />
-          </motion.div>
-        </div>
+        
       </div>
     </section>
   );

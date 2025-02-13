@@ -1,6 +1,8 @@
 
 import './App.css'
+import Footer from './components/Footer'
 import Hero from './components/Hero/Hero'
+import Location from './components/Location/Location'
 import Services from './components/Services/Services'
 import WhyUs from './components/WhyUs/WhyUs'
 function App() {
@@ -11,6 +13,8 @@ function App() {
        <Hero/>
        <WhyUs/>
        <Services/>
+       <Location/>
+       <Footer/>
 
       </main>
     </>
